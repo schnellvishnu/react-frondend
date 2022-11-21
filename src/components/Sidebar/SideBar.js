@@ -8,83 +8,130 @@ import { BsCartCheck } from "react-icons/bs";
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import SidebarMenu from "./SidebarMenu";
+import * as RiIcons from "react-icons/ri";
+import * as  IoIcons from "react-icons/io";
+import * as  AiIcons from "react-icons/ai";
 const routes = [
   {
     path: "/",
+    name: "Home",
+    icon: <FaHome />,
+  },
+  
+  {
+    path: "/account/ReadDataGrid",
+    name: "Account",
+    icon: <IoIcons.IoIosPaper />,
+  },
+  {
+    path: "/dashboard/dashboard",
     name: "Dashboard",
     icon: <FaHome />,
   },
   {
-    path: "/users",
-    name: "Users",
-    icon: <FaUser />,
-  },
-  {
-    path: "/messages",
-    name: "Messages",
-    icon: <MdMessage />,
-  },
-  {
-    path: "/analytics",
-    name: "Analytics",
+    path: "/po/podatagrid",
+    name: "Productionorder",
     icon: <BiAnalyse />,
   },
   {
-    path: "/file-manager",
-    name: "File Manager",
-    icon: <AiTwotoneFileExclamation />,
+    path: "/barcode/bardatagrid",
+    name: "Barcode",
+    icon: <IoIcons.IoMdBarcode/>,
+  },
+  {
+    path: "/snprovider/sndatagrid",
+    name: "Snprovider",
+    icon: <IoIcons.IoMdBarcode/>,
+  },
+  {
+    path: "/regsystem/regsystemdatagrid",
+    name: "Registered System",
+    icon: <IoIcons.IoMdBarcode/>,
+  },
+  {
+    path: "/stock/stockdatagrid/",
+    name: "Stock",
+    icon: <IoIcons.IoMdBarcode/>,
+  },
+  {
+    path: "/company/comdatagrid",
+    name: "Company",
+    icon: <MdMessage />,
+  },
+  {
+    path: "/product/productdatagrid",
+    name: "Product",
+    icon: <MdMessage />,
+  },
+  
+  {
+    path: "/customer/cusdatagrid",
+    name: "Customers",
+    icon: <AiIcons.AiOutlineUser/>,
     subRoutes: [
       {
-        path: "/settings/profile",
-        name: "Profile ",
-        icon: <FaUser />,
+        path: "/customer/cusdatagrid",
+        name: "Customer ",
+        icon: <AiIcons.AiOutlineUser/>,
       },
       {
-        path: "/settings/2fa",
-        name: "2FA",
-        icon: <FaLock />,
+        path: "/customerlocation/cuslocdatagrid/",
+        name: "CustomerLocation",
+        icon: <AiIcons.AiFillEnvironment/>,
       },
-      {
-        path: "/settings/billing",
-        name: "Billing",
-        icon: <FaMoneyBill />,
-      },
+      // {
+      //   path: "/settings/billing",
+      //   name: "Billing",
+      //   icon: <FaMoneyBill />,
+      // },
     ],
   },
   {
-    path: "/order",
-    name: "Order",
-    icon: <BsCartCheck />,
+    path: "/manufacture/manudatagrid",
+    name: "ManufacturingLocation",
+    icon: <AiIcons.AiFillEnvironment/>,
   },
+  // {
+  //   path: "/settings",
+  //   name: "Settings",
+  //   icon: <BiCog />,
+  //   exact: true,
+  //   subRoutes: [
+  //     {
+  //       path: "/settings/profile",
+  //       name: "Profile ",
+  //       icon: <FaUser />,
+  //     },
+  //     {
+  //       path: "/settings/2fa",
+  //       name: "2FA",
+  //       icon: <FaLock />,
+  //     },
+      // {
+      //   path: "/settings/billing",
+      //   name: "Billing",
+      //   icon: <FaMoneyBill />,
+  //     // },
+  //   ],
+  // },
   {
-    path: "/settings",
-    name: "Settings",
-    icon: <BiCog />,
-    exact: true,
-    subRoutes: [
-      {
-        path: "/settings/profile",
-        name: "Profile ",
-        icon: <FaUser />,
-      },
-      {
-        path: "/settings/2fa",
-        name: "2FA",
-        icon: <FaLock />,
-      },
-      {
-        path: "/settings/billing",
-        name: "Billing",
-        icon: <FaMoneyBill />,
-      },
-    ],
-  },
-  {
-    path: "/saved",
-    name: "Saved",
+    path: "/shippo/shippodatagrid/",
+    name: "Shippo",
     icon: <AiFillHeart />,
   },
+  {
+    path: "/audit/auditdatagrid/",
+    name: "Audit Trial",
+    icon: <AiFillHeart />,
+  },
+  {
+    path: "/report/productionorderreport",
+    name: "Report",
+    icon: <IoIcons.IoIosPaper />,
+  },
+  
 ];
+
 
 const SideBar = ({ children }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -148,7 +195,7 @@ const SideBar = ({ children }) => {
                   exit="hidden"
                   className="logo"
                 >
-                  DoSomeCoding
+                  
                 </motion.h1>
               )}
             </AnimatePresence>

@@ -23,6 +23,7 @@ main {
   color: white;
   height: 100vh;
   overflow-y: auto;
+  width:40%;
 }
 
 .top_section {
@@ -89,6 +90,7 @@ main {
 .menu {
   display: flex;
   color: white;
+  width:18%;
 
   padding: 5px 10px;
   border-right: 4px solid transparent;
@@ -107,3 +109,51 @@ main {
   padding-left: 20px;
   border-bottom: #fff 0.5px solid;
 }
+.dash-body
+{
+  background-color:rgb(137, 148, 242) ;
+  width: 240%;
+  height: 1000px;
+}
+
+/* report */
+.productionOrderReportResultTable {
+  width: 100%;
+  height: 200px;
+ }
+  
+ .productionOrderReportResultTH {
+  border-bottom: 1px solid black;
+  text-align: left;
+  padding: 5px 0px 6px 7px;
+ }
+  
+ .productionOrderReportResultTD {
+  text-align: left;
+  padding: 0px 0px 13px 7px;
+ }
+ 
+ .productionOrderReportSearchTable {
+  border: 2px solid lightgray;
+  font-family:Arial, Helvetica, sans-serif;
+ }
+ 
+ .productionOrderReportSearchBoxInvisble {
+  color: transparent;
+  display: none;
+ }
+ 
+ .productionOrderReportResultTableDIVouter {
+  padding-right: 100px;
+ }
+ 
+ .productionOrderReportResultTableDIV {
+  overflow-y: scroll;
+  height: 360px;
+  border: 2px solid gray;
+ }
+ .naclass
+ {
+  width:350%;
+ }
+ 
